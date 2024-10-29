@@ -11,15 +11,13 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Radio,
-  RadioGroup,
   Textarea,
   useDisclosure,
 } from '@chakra-ui/react';
 
 import { BiAddToQueue } from 'react-icons/bi';
 
-function CreateUserModal() {
+function EditModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -50,12 +48,6 @@ function CreateUserModal() {
                 overflowY="hidden"
               ></Textarea>
             </FormControl>
-            <RadioGroup defaultValue="male" mt={4}>
-              <Flex gap={5}>
-                <Radio value="male">Male</Radio>
-                <Radio value="female">Female</Radio>
-              </Flex>
-            </RadioGroup>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3}>
@@ -69,4 +61,4 @@ function CreateUserModal() {
   );
 }
 
-export default CreateUserModal;
+export default EditModal;
