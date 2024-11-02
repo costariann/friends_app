@@ -4,7 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///friends.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
